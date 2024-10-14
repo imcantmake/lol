@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay">
+            <h1>Game Snake</h1>
+            <div class="customization">
+                <label for="snake-color">Warna Ular:</label>
+                <input type="color" id="snake-color" value="#32CD32">
+
+                <label for="game-speed">Kecepatan:</label>
+                <select id="game-speed">
+                    <option value="200">Lambat</option>
+                    <option value="100" selected>Sedang</option>
+                    <option value="50">Cepat</option>
+                </select>
+
+                <label for="canvas-size">Ukuran Kanvas:</label>
+                <select id="canvas-size">
+                    <option value="300">300x300</option>
+                    <option value="400" selected>400x400</option>
+                    <option value="500">500x500</option>
+                </select>
+            </div>
+            <button id="start-button">Mulai Permainan</button>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <!-- In-Game Menu Button -->
+        <button id="menu-button" class="menu-button">Menu</button>
+
+        <!-- In-Game Menu Overlay -->
+        <div id="in-game-menu" class="overlay hidden">
+            <h2>Menu</h2>
+            <button id="resume-button">Resume</button>
+            <button id="restart-button">Restart Permainan</button>
+            <button id="main-menu-button">Kembali ke Menu Utama</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over" class="overlay hidden">
+            <h2>Game Over!</h2>
+            <p>Skor: <span id="final-score">0</span></p>
+            <button id="restart-button">Restart Permainan</button>
+        </div>
+
+        <!-- Score Display -->
+        <div id="score">Score: 0</div>
+    </div>
+
+    <script src="snake.js"></script>
+</body>
+</html>
